@@ -57,9 +57,31 @@ class MovieTableViewController: UITableViewController {
         
         cell.titleLabel?.text = movie.title
         cell.yearLabel?.text = movie.year
-        print(movie.title)
+        if let url = URL(string: movie.posterUrl!) {
+            cell.posterImageView.contentMode = .scaleAspectFill
+            downloadImage(url: url, imageView: cell.posterImageView)
+        }
 
         return cell
+    }
+    
+    func getDataFromUrl(url: URL, completion: @escaping (_ data: Data?, _  response: URLResponse?, _ error: Error?) -> Void) {
+        URLSession.shared.dataTask(with: url) {
+            (data, response, error) in
+            completion(data, response, error)
+            }.resume()
+    }
+    
+    func downloadImage(url: URL, imageView: UIImageView) {
+        print("Download Started")
+        getDataFromUrl(url: url) { (data, response, error)  in
+            DispatchQueue.main.sync() { () -> Void in
+                guard let data = data, error == nil else { return }
+                print(response?.suggestedFilename ?? url.lastPathComponent)
+                print("Download Finished")
+                imageView.image = UIImage(data: data)
+            }
+        }
     }
     
 
