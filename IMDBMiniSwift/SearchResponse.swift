@@ -16,7 +16,6 @@ class SearchResponse: Mappable {
     var isSuccess: String?
     
     required init?(map: Map) {
-        
         /*
         if map["Search"].value() == nil {
             return nil
@@ -25,7 +24,6 @@ class SearchResponse: Mappable {
             return nil
         }
          */
-        
     }
     
     func mapping(map: Map) {
