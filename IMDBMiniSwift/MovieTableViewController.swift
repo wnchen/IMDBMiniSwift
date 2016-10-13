@@ -14,6 +14,8 @@ import ObjectMapper
 class MovieTableViewController: UITableViewController {
 
     var movies = [Movie]()
+    var name = ""
+    var year = ""
     
     override func viewDidLoad() {
         print("viewDidLoad")
@@ -21,7 +23,7 @@ class MovieTableViewController: UITableViewController {
         
         let URL = "http://www.omdbapi.com/"
         
-        Alamofire.request(URL, method: .get, parameters: ["s": "spider"]).responseObject{ (response: DataResponse<SearchResponse>) in
+        Alamofire.request(URL, method: .get, parameters: ["s": name, "y": year]).responseObject{ (response: DataResponse<SearchResponse>) in
             let searchResponse = response.result.value
             self.movies = (searchResponse?.searchArray)!
             self.tableView.reloadData()

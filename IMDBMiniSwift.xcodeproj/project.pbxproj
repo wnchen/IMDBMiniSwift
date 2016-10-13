@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		657206031DAC199F006142A8 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 657206021DAC199F006142A8 /* MovieSearchViewController.swift */; };
 		659B08871DA5E7F600C52AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659B08861DA5E7F600C52AE5 /* Assets.xcassets */; };
 		659B088A1DA5E7F600C52AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659B08881DA5E7F600C52AE5 /* LaunchScreen.storyboard */; };
 		659B08921DA5E8B900C52AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B08911DA5E8B900C52AE5 /* AppDelegate.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		39E916DEE29A4E3DEB70F4C6 /* Pods_IMDBMiniSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IMDBMiniSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		657206021DAC199F006142A8 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
 		659B087C1DA5E7F600C52AE5 /* IMDBMiniSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDBMiniSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		659B08861DA5E7F600C52AE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		659B08891DA5E7F600C52AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				659B08951DA5E8EE00C52AE5 /* Main.storyboard */,
+				657206021DAC199F006142A8 /* MovieSearchViewController.swift */,
 				659B08881DA5E7F600C52AE5 /* LaunchScreen.storyboard */,
 				659B08931DA5E8CB00C52AE5 /* ViewController.swift */,
 				659B08991DA5E91E00C52AE5 /* Movie.swift */,
@@ -243,6 +246,7 @@
 				659B08921DA5E8B900C52AE5 /* AppDelegate.swift in Sources */,
 				659B089C1DA5E92B00C52AE5 /* MovieTableViewCell.swift in Sources */,
 				659B089A1DA5E91E00C52AE5 /* Movie.swift in Sources */,
+				657206031DAC199F006142A8 /* MovieSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
