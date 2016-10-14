@@ -11,7 +11,6 @@
 		659B08871DA5E7F600C52AE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 659B08861DA5E7F600C52AE5 /* Assets.xcassets */; };
 		659B088A1DA5E7F600C52AE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659B08881DA5E7F600C52AE5 /* LaunchScreen.storyboard */; };
 		659B08921DA5E8B900C52AE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B08911DA5E8B900C52AE5 /* AppDelegate.swift */; };
-		659B08941DA5E8CB00C52AE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B08931DA5E8CB00C52AE5 /* ViewController.swift */; };
 		659B08961DA5E8EE00C52AE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 659B08951DA5E8EE00C52AE5 /* Main.storyboard */; };
 		659B08981DA5E90600C52AE5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 659B08971DA5E90600C52AE5 /* Info.plist */; };
 		659B089A1DA5E91E00C52AE5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 659B08991DA5E91E00C52AE5 /* Movie.swift */; };
@@ -31,7 +30,6 @@
 		659B08861DA5E7F600C52AE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		659B08891DA5E7F600C52AE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		659B08911DA5E8B900C52AE5 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		659B08931DA5E8CB00C52AE5 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		659B08951DA5E8EE00C52AE5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		659B08971DA5E90600C52AE5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		659B08991DA5E91E00C52AE5 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
@@ -84,7 +82,6 @@
 				659B08951DA5E8EE00C52AE5 /* Main.storyboard */,
 				657206021DAC199F006142A8 /* MovieSearchViewController.swift */,
 				659B08881DA5E7F600C52AE5 /* LaunchScreen.storyboard */,
-				659B08931DA5E8CB00C52AE5 /* ViewController.swift */,
 				659B08991DA5E91E00C52AE5 /* Movie.swift */,
 				659B089B1DA5E92B00C52AE5 /* MovieTableViewCell.swift */,
 				659B089D1DA5E93000C52AE5 /* MovieTableViewController.swift */,
@@ -240,7 +237,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				659B089E1DA5E93000C52AE5 /* MovieTableViewController.swift in Sources */,
-				659B08941DA5E8CB00C52AE5 /* ViewController.swift in Sources */,
 				659B08A01DA5E93500C52AE5 /* SearchResponse.swift in Sources */,
 				659B08A61DA5E98400C52AE5 /* README.md in Sources */,
 				659B08921DA5E8B900C52AE5 /* AppDelegate.swift in Sources */,
