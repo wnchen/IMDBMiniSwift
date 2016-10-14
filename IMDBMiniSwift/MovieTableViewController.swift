@@ -58,6 +58,7 @@ class MovieTableViewController: UITableViewController {
         let movie = movies[indexPath.row]
         
         cell.titleLabel?.text = movie.title
+        cell.typeLabel?.text = movie.type
         cell.yearLabel?.text = movie.year
         if let url = URL(string: movie.posterUrl!) {
             cell.posterImageView.contentMode = .scaleAspectFill
