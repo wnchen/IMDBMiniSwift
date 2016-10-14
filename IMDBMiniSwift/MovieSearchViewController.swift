@@ -35,13 +35,21 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
-        movieNameTextField.resignFirstResponder()
-        //movieYearTextField.resignFirstResponder()
+        if textField == movieNameTextField {
+            movieNameTextField.resignFirstResponder()
+        } else if textField == movieYearTextField {
+            movieYearTextField.resignFirstResponder()
+        }
+        
         return true
     }
     
     func textFieldDidEndEditing(textField: UITextField) {
-        movieNameTextField.text = textField.text
+        if textField == movieNameTextField {
+            movieNameTextField.text = textField.text
+        } else if textField == movieYearTextField {
+            movieYearTextField.text = textField.text
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
