@@ -22,17 +22,7 @@ class Movie: Mappable {
     
     
     required init?(map: Map) {
-        /*
-        if map["Title"].value() == nil {
-            return nil
-        }
-        if map["Year"].value() == nil {
-            return nil
-        }
-        if map["Poster"].value() == nil {
-            return nil
-        }
-         */
+        
     }
     
     func mapping(map: Map) {
