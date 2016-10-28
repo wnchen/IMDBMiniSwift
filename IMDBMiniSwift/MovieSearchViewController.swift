@@ -15,6 +15,7 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var movieYearTextField: UITextField!
     
+    @IBOutlet weak var submitButton: UIButton!
     
     @IBAction func submitButton(_ sender: UIButton) {
         //performSegue(withIdentifier: "showMovies", sender: sender)
@@ -25,6 +26,12 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
         
         movieNameTextField.delegate = self
         movieYearTextField.delegate = self
+        
+        submitButton.backgroundColor = UIColor.clear
+        submitButton.layer.cornerRadius = 6
+        submitButton.layer.borderWidth = 3
+        submitButton.layer.borderColor = UIColor.black.cgColor
+        submitButton.contentEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
 
         // Do any additional setup after loading the view.
     }

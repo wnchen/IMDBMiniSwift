@@ -24,9 +24,18 @@ class MovieTableViewController: UITableViewController {
         let URL = "http://www.omdbapi.com/"
         
         Alamofire.request(URL, method: .get, parameters: ["s": name, "y": year]).responseObject{ (response: DataResponse<SearchResponse>) in
-            let searchResponse = response.result.value
-            self.movies = (searchResponse?.searchArray)!
-            self.tableView.reloadData()
+            print("response is: \(response)")
+            switch response.result {
+            case .success(let value):
+                let searchResponse = value
+                self.movies = (searchResponse.searchArray)!
+                self.tableView.reloadData()
+            case .failure(let error):
+                let alert = UIAlertController(title: "Error", message: "Error 4xx / 5xx: \(error)", preferredStyle: UIAlertControllerStyle.alert)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+                self.present(alert, animated: true, completion: nil)
+            }
+            
         }
     }
 
