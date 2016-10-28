@@ -34,7 +34,7 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == movieNameTextField {
             movieNameTextField.resignFirstResponder()
         } else if textField == movieYearTextField {
@@ -44,7 +44,7 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
         return true
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
+    func textFieldDidEndEditing(_ textField: UITextField) {
         if textField == movieNameTextField {
             movieNameTextField.text = textField.text
         } else if textField == movieYearTextField {
@@ -53,11 +53,21 @@ class MovieSearchViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (movieNameTextField.text!.isEmpty){
+            showAlertButton(tile: "Alert", msg: "Name can not be empty")
+            return
+        }
         if segue.identifier == "showMovies" {
             let controller = segue.destination as! MovieTableViewController
             controller.name = movieNameTextField.text!
             controller.year = movieYearTextField.text!
         }
+    }
+    
+    func showAlertButton(tile: String, msg: String) {
+        let alert = UIAlertController(title: tile, message: msg, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 
 }
